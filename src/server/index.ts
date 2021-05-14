@@ -48,6 +48,8 @@ async function getConversation(id: string, author_id: string) {
   return data?.data?.reverse();
 }
 
+// https://expressjs.com/en/guide/error-handling.html
+
 app.get("/conversation/:id", async (req, res, next) => {
   try {
     const firstTweet = await getTweet(req.params.id);
